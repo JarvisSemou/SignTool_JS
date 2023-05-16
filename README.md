@@ -29,7 +29,7 @@ npm
 2. generate CTICloud sign param
 
     ```js
-        let sign = SignTool.genSignSync(SignType.Enterprise_Id_And_Token, {
+        let {timestamp, sign} = SignTool.genSignSync(SignType.Enterprise_Id_And_Token, {
             enterpriseId: "xxxxxxxxx",
             token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         })
@@ -38,7 +38,7 @@ npm
     or
 
     ```js
-        let sign = await SignTool.genSign(SignType.Enterprise_Id_And_Token, {
+        let {timestamp, sign} = await SignTool.genSign(SignType.Enterprise_Id_And_Token, {
             enterpriseId: "xxxxxxxxx",
             token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         })

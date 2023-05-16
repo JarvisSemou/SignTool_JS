@@ -77,6 +77,8 @@ const SignTool = {
      * 
      * @param {SignType} signType 签名类型, 参考 SignType
      * @param {Object} params 
+     * 
+     * @returns {Object} { timestamp: string, sign: string }
      */
     async genSign(signType, params) {
         return judgeSignType(signType, params)
@@ -87,6 +89,8 @@ const SignTool = {
      * 
      * @param {SignType} signType 签名类型, 参考 SignType
      * @param {Object} params 
+     * 
+     * @returns {Object} { timestamp: string, sign: string }
      */
     genSignSync(signType, params) {
         return judgeSignType(signType, params)
@@ -156,7 +160,10 @@ function genSignByDepartmentIdAndToken(params) {
 
     logResult(timestamp, sign)
 
-    return sign
+    return {
+        timestamp: timestamp,
+        sign: sign
+    }
 }
 
 function genSignByEnterpriseIdAndToken(params) {
@@ -169,7 +176,10 @@ function genSignByEnterpriseIdAndToken(params) {
 
     logResult(timestamp, sign)
 
-    return sign
+    return {
+        timestamp: timestamp,
+        sign: sign
+    }
 }
 
 function genSignByDepartmentIdAndCrmIdAndPassword(params) {
@@ -182,7 +192,10 @@ function genSignByDepartmentIdAndCrmIdAndPassword(params) {
 
     logResult(timestamp, sign)
 
-    return sign
+    return {
+        timestamp: timestamp,
+        sign: sign
+    }
 }
 
 function genSignByEnterpriseIdAndCrmIdAndPassword(params) {
@@ -195,7 +208,10 @@ function genSignByEnterpriseIdAndCrmIdAndPassword(params) {
 
     logResult(timestamp, sign)
 
-    return sign
+    return {
+        timestamp: timestamp,
+        sign: sign
+    }
 }
 
 function genSignByDepartmentIdAndCnoAndAgentToken(params) {
@@ -208,7 +224,10 @@ function genSignByDepartmentIdAndCnoAndAgentToken(params) {
 
     logResult(timestamp, sign)
 
-    return sign
+    return {
+        timestamp: timestamp,
+        sign: sign
+    }
 }
 
 function genSignByEnterpriseIdAndCnoAndAgentToken(params) {
@@ -221,7 +240,10 @@ function genSignByEnterpriseIdAndCnoAndAgentToken(params) {
 
     logResult(timestamp, sign)
 
-    return sign
+    return {
+        timestamp: timestamp,
+        sign: sign
+    }
 }
 
 
