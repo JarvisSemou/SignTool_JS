@@ -5,6 +5,11 @@
   "main": "src/main/js/SignTool.js",
   "author": "Jarvis Semou",
   "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JarvisSemou/SignTool_JS"
+  },
   "dependencies": {
     "crypto-js": "^4.1.1"
   },
