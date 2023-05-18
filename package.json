@@ -1,6 +1,6 @@
 {
   "name": "sign_tool_js",
-  "version": "1.0.0-snapshot.2",
+  "version": "1.0.0",
   "description": "authenticate tool for CTICloud",
   "main": "src/main/js/SignTool.js",
   "author": "Jarvis Semou",
