@@ -23,11 +23,23 @@ npm
 1. import
 
     ```js
-    
+        import { SignTool, SignType } from "sign_tool_js"
     ```
 
 2. generate CTICloud sign param
 
     ```js
+        let {timestamp, sign} = SignTool.genSignSync(SignType.Enterprise_Id_And_Token, {
+            enterpriseId: "xxxxxxxxx",
+            token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        })
+    ```
 
+    or
+
+    ```js
+        let {timestamp, sign} = await SignTool.genSign(SignType.Enterprise_Id_And_Token, {
+            enterpriseId: "xxxxxxxxx",
+            token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        })
     ```
